@@ -1,4 +1,5 @@
-import './App.css'
+
+import HomeHero from './components/homehrero'
 import Navbar from './components/navbar'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
     <Navbar isLogged={false} />
+    <HomeHero />
     </>
   )
 }
