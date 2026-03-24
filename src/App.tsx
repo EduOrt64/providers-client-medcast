@@ -1,14 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
-import HomeHero from './components/homehrero'
-import Navbar from './components/navbar'
+import HomePublic from './pages/homepublic'
 
 function App() {
   return (
     <>
-      <Navbar isLogged={false} />
-
       <Routes>
-        <Route path="/" element={<HomeHero />} />
+        <Route path="/" element={<HomePublic />} />
       </Routes>
     </>
   )

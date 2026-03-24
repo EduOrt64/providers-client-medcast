@@ -1,16 +1,9 @@
 import logo from '../assets/logo.png'
-import PublicNavbar from './publicnavbar'
 
-type Props = {
-  isLogged: boolean
-}
-
-export default function Navbar({ isLogged }: Props) {
+export default function PublicNavbar() {
 
     return (
-      <div>
-       {isLogged ? 
-       <div className="navbar bg-base-100 shadow-sm">
+ <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +23,11 @@ export default function Navbar({ isLogged }: Props) {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-      <img src={logo} alt="logo" className="h-16" />
+    <div className="flex items-center ">
+  <img src={logo} alt="logo" className="h-16 w-32" />
+  
+
+</div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -48,19 +45,10 @@ export default function Navbar({ isLogged }: Props) {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn btn-ghost">Log in</a>
+    <a className="btn">Sign Up</a>
   </div>
 </div>
-       
-       
-       : 
-       
-     <PublicNavbar />
-
-
-       }
-      </div>
 
     )
-
 }
